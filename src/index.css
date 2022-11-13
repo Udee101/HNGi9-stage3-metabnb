@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --purple-bg: linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%);
+}
+
+body{
+  font-family: 'Red Rose';
+}
+
+.app{
+  padding: 15px;
+  max-width: 1240px;
+}
+
+.logo_icon img{
+  height: 35px;
+}
+
+.btn_connect button{
+  font-family: inherit;
+  background: var(--purple-bg);
+  color: #fff;
+  width: 170px;
+  height: 48px;
+}
+
+.search_box input{
+  height: 54px;
+}
+
+.search_box input[placeholder] {
+  padding: 0 0 0 10px;
+}
+
+.btn_search{
+  width: 230px;
+  height: 54px;
+  background: var(--purple-bg);
+  color: #fff;
+}
+
+.hero_intro span{
+  font-weight: 600;
+  color: #A02279;
+}
+
+.hero_desc{
+  font-weight: 400;
+  color: #434343;
+  line-height: 24px;
+}
+
+.wallets{
+  background: var(--purple-bg);
+}
