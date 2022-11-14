@@ -6,15 +6,15 @@ import Img4 from '../assets/image 4.png'
 
 const GroupImage = () => {
   return (
-    <div className='hero_imgs my-6'>
-      <div>
-        <img src={Img1} alt="" className='w-full my-3' />
-        <img src={Img2} alt="" className='w-full my-3' />
+    <div className='hero_imgs my-6 sm:flex w-full sm:w-full sm:gap-2 justify-center lg:justify-end'>
+      <div className='sm:flex-col sm:mt-20'>
+        <img src={Img1} alt="" className='w-full my-2 sm:my-2' />
+        <img src={Img2} alt="" className='w-full my-2'  />
       </div>
 
-      <div>
-        <img src={Img3} alt="" className='w-full my-3' />
-        <img src={Img4} alt="" className='w-full my-3' />
+      <div className='sm:flex-col'>
+        <img src={Img3} alt="" className='w-full my-2 sm:my-2' />
+        <img src={Img4} alt="" className='w-full my-2' />
       </div>
     </div>
   )
