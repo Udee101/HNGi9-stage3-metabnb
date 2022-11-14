@@ -8,16 +8,16 @@ import OpenSea from '../assets/opensea.svg'
 
 const Wallets = () => {
   return (
-    <div className='wallets flex justify-center flex-wrap my-3'>
-      <div className="mbt-logo m-3">
+    <div className='wallets mx-auto app flex justify-center flex-wrap my-3 md:justify-between md:h-16 md:pt-3'>
+      <div className="mbt-logo m-3 md:m-0">
         <Logo src={Mbtoken}/>
       </div>
 
-      <div className="mask-logo m-3">
+      <div className="mask-logo m-3 md:m-0">
         <Logo src={MetaMask} />
       </div>
 
-      <div className="sea-logo m-3">
+      <div className="sea-logo m-3 md:m-0">
         <Logo src={OpenSea} />
       </div>
     </div>
