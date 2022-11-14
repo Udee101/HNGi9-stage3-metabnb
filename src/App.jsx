@@ -1,13 +1,17 @@
 import React from 'react'
-import NavBar from './components/Navbar'
+import { Routes, Route } from "react-router-dom";
+import Layout from './container/Layout'
 import Home from './pages/Home'
+import PlaceToStay from './pages/PlaceToStay'
 
 const App = () => {
   return (
-    <div>
-      <NavBar />
-      <Home />
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="placetostay" element={<PlaceToStay />} />
+      </Route>
+    </Routes>
   )
 }
 
