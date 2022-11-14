@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import Logo from './Logo'
 import BnbLogo from '../assets/metabnb.png';
 import Button from './Button'
@@ -19,10 +20,10 @@ const Navbar = () => {
         </div>
         {/* ::Navbar */}
         <nav className="hidden lg:flex items-center justify-around text-base tracking-wide">
-          <a href="#link" className=" mr-9 hover:text-purple-600">Home</a>
-          <a href="#link" className=" mr-9 hover:text-purple-600">Place to stay</a>
-          <a href="#link" className=" mr-9 hover:text-purple-600">NFTs</a>
-          <a href="#link" className=" mr-9 hover:text-purple-600">Community</a>
+          <Link to="/" className=" mr-9 hover:text-purple-600">Home</Link>
+          <Link to="/placetostay" className=" mr-9 hover:text-purple-600">Place to stay</Link>
+          <Link to="#" className=" mr-9 hover:text-purple-600">NFTs</Link>
+          <Link to="#" className=" mr-9 hover:text-purple-600">Community</Link>
         </nav>
         {/* button */}
         <div className="hidden lg:inline-flex btn_connect ml-auto md:ml-0 mr-4 md:mr-0 cursor-pointer">
@@ -46,10 +47,10 @@ const Navbar = () => {
       {/* ::MOBILE MENU */}
       { isOpen &&
         <div className="w-full flex flex-col py-4 px-3 lg:hidden bg-white text-base uppercase text-center font-semibold">
-          <a href="#" className="block px-3 py-2 rounded-md text-gray-700 hover:text-white hover:bg-purple-900">Home</a>
-          <a href="#" className="block px-3 py-2 rounded-md text-gray-700 hover:text-white hover:bg-purple-900">Place to stay</a>
-          <a href="#" className="block px-3 py-2 rounded-md text-gray-700 hover:text-white hover:bg-purple-900">NFTs</a>
-          <a href="#" className="block px-3 py-2 rounded-md text-gray-700 hover:text-white hover:bg-purple-900">Community</a>
+          <Link to="/" className="block px-3 py-2 rounded-md text-gray-700 hover:text-white hover:bg-purple-900">Home</Link>
+          <Link to="/placetostay" className="block px-3 py-2 rounded-md text-gray-700 hover:text-white hover:bg-purple-900">Place to stay</Link>
+          <Link to="/" className="block px-3 py-2 rounded-md text-gray-700 hover:text-white hover:bg-purple-900">NFTs</Link>
+          <Link to="/" className="block px-3 py-2 rounded-md text-gray-700 hover:text-white hover:bg-purple-900">Community</Link>
           <div className='btn_connect'>
             <Button 
               className="rounded-md my-2"
