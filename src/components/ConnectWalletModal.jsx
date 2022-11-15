@@ -9,7 +9,7 @@ const ConnectWalletModal = ({setModalOn}) => {
 
   return (
     <div className=" modal_container fixed inset-0 z-40">  
-      <div className="flex h-screen justify-center items-center p-10 ">
+      <div className="flex h-screen justify-center items-center p-8 ">
         <div className="modal w-96 min-h-80 flex-col justify-center z-50 bg-white rounded-2xl">
           <div className=" p-6 flex justify-between" >
             <p className='text-lg lg:text-2xl font-bold'>Connect Wallet</p>
