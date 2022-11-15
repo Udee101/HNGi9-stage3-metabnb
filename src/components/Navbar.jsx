@@ -3,12 +3,19 @@ import { Link } from 'react-router-dom';
 import Logo from './Logo'
 import BnbLogo from '../assets/metabnb.png';
 import Button from './Button'
+import ConnectWalletModal from './ConnectWalletModal';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [modalOn, setModalOn] = useState(false)
+
+  const toggleModal = () => {
+    setModalOn(!modalOn)
+  }
 
   return (
-    <nav className="w-full bg-white text-gray-700 body-font mb-4 fixed top-0 left-0 right-0 z-50">
+    <div>
+    <nav className="w-full bg-white text-gray-700 body-font mb-4 fixed top-0 left-0 right-0 z-30">
 
       {/* :DESKTOP MENU */}
       <div className=" nav_logo app container mx-auto flex justify-between items-center py-7 px-5">
@@ -20,15 +27,16 @@ const Navbar = () => {
         </div>
         {/* ::Navbar */}
         <nav className="hidden lg:flex items-center justify-around text-base tracking-wide">
-          <Link to="/" className=" mr-9 hover:text-purple-600">Home</Link>
-          <Link to="/placetostay" className=" mr-9 hover:text-purple-600">Place to stay</Link>
-          <Link to="#" className=" mr-9 hover:text-purple-600">NFTs</Link>
-          <Link to="#" className=" mr-9 hover:text-purple-600">Community</Link>
+          <Link to="/" className=" mr-9 hover:text-purple-600 text-xl">Home</Link>
+          <Link to="/placetostay" className=" mr-9 hover:text-purple-600 text-xl">Place to stay</Link>
+          <Link to="#" className=" mr-9 hover:text-purple-600 text-xl">NFTs</Link>
+          <Link to="#" className=" mr-9 hover:text-purple-600 text-xl">Community</Link>
         </nav>
         {/* button */}
         <div className="hidden lg:inline-flex btn_connect ml-auto md:ml-0 mr-4 md:mr-0 cursor-pointer">
-          <Button 
-          className="rounded-md"
+          <Button
+            onClick = {toggleModal}
+            className="rounded-md"
             type="submit" 
             title="Connect wallet" 
           />
@@ -46,13 +54,14 @@ const Navbar = () => {
 
       {/* ::MOBILE MENU */}
       { isOpen &&
-        <div className="w-full flex flex-col py-4 px-3 lg:hidden bg-white text-base uppercase text-center font-semibold">
+        <div className="w-full flex flex-col py-4 px-3 lg:hidden bg-white text-base text-right font-semibold">
           <Link to="/" className="block px-3 py-2 rounded-md text-gray-700 hover:text-white hover:bg-purple-900">Home</Link>
           <Link to="/placetostay" className="block px-3 py-2 rounded-md text-gray-700 hover:text-white hover:bg-purple-900">Place to stay</Link>
           <Link to="/" className="block px-3 py-2 rounded-md text-gray-700 hover:text-white hover:bg-purple-900">NFTs</Link>
           <Link to="/" className="block px-3 py-2 rounded-md text-gray-700 hover:text-white hover:bg-purple-900">Community</Link>
           <div className='btn_connect'>
             <Button 
+              onClick = {toggleModal}
               className="rounded-md my-2"
               type="submit" 
               title="Connect wallet" 
@@ -62,6 +71,9 @@ const Navbar = () => {
         </div>
       }
     </nav>
+
+      {modalOn && <ConnectWalletModal setModalOn={toggleModal} />}
+    </div>
   )
 }
 
