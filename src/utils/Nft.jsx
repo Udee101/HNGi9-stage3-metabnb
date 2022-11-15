@@ -1,7 +1,7 @@
 import React from 'react'
 const Nft = (props) => {
   return (
-    <div className='nft_card rounded-2xl w-full p-3 my-3 sm:w-72 sm:h-80 sm:text-xsm'>
+    <div className='nft_card rounded-2xl w-10/12 p-3 my-3 sm:w-72 sm:h-80 sm:text-xsm'>
       <div className='nft_img '>
         <img src={props.image} alt="nft" />
       </div>
