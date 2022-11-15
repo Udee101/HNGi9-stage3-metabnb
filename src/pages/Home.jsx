@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import Button from '../components/Button'
-import Footer from '../components/Footer'
 import GroupImage from '../components/GroupImage'
 import HomeNfts from '../components/HomeNfts'
 import MoreNfts from '../components/MoreNfts'
@@ -43,7 +42,6 @@ const Home = () => {
           </div>
         <GroupImage />
       </div>
-        
       </section>
 
       <section id='wallets'>
@@ -76,9 +74,7 @@ const Home = () => {
           <MoreNfts />
         </div>  
       </section>
-
-      <Footer />
-    </div>  
+    </div>   
   )
 }
 
