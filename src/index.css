@@ -129,6 +129,25 @@ body {
   line-height: 35px;
 }
 
+.locations p{
+  color: var(--text-black);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal_container{
+  background: rgba(64, 64, 64, 0.3) !important;
+  position: fixed;
+}
+
+.modal p{
+  color: var(--text-black);
+}
+
+.connect-wallet{
+  border: 1px solid #CFD8DC;
+}
+
 @media screen and (min-width: 768px) {
   .more_nft img{
     width: 704px;
@@ -140,5 +159,9 @@ body {
 @media screen and (min-width: 1024px) {
   .hero_intro {
     line-height: 140% !important;
+  }
+
+  .modal{
+    width: 600px;
   }
 }
