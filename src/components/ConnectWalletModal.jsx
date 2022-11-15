@@ -17,7 +17,7 @@ const ConnectWalletModal = ({setModalOn}) => {
           </div> 
           <hr />
           <div className="btn_wallets p-6">
-            <p className='text-xs pt-4'>choose your preferred wallet
+            <p className='text-sm pt-4'>choose your preferred wallet
             </p>
 
             <WalletButton 
