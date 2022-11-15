@@ -6,8 +6,8 @@ import Img4 from '../assets/image 4.png'
 
 const GroupImage = () => {
   return (
-    <div className='hero_imgs my-6 sm:flex w-full sm:w-full sm:gap-2 justify-center lg:justify-end'>
-      <div className='sm:flex-col sm:mt-20'>
+    <div className='hero_imgs my-6 flex w-full sm:w-full gap-2 justify-center lg:justify-end'>
+      <div className='flex-col mt-20'>
         <img src={Img1} alt="" className='w-full my-2 sm:my-2' />
         <img src={Img2} alt="" className='w-full my-2'  />
       </div>
